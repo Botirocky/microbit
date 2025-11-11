@@ -84,6 +84,9 @@ input.onGesture(Gesture.Shake, function () {
         basic.showString("kedves utasaink a vonat kesik 15 percet")
     }
 })
+input.onButtonPressed(Button.AB, function () {
+    basic.clearScreen()
+})
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     basic.showString("the code was made by Boti")
 })
