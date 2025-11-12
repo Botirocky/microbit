@@ -1,19 +1,6 @@
 input.onButtonPressed(Button.A, function () {
-    for (let index = 0; index < 4; index++) {
-        basic.showLeds(`
-            . . . . .
-            . # . # .
-            . . . . .
-            . # # # .
-            # . . . #
-            `)
-        basic.showLeds(`
-            . . . . .
-            . # . # .
-            . . . . .
-            # . . . #
-            . # # # .
-            `)
+    for (let index = 0; index < 2; index++) {
+        basic.showString("" + (input.temperature()))
     }
 })
 input.onGesture(Gesture.Shake, function () {
@@ -87,6 +74,12 @@ input.onButtonPressed(Button.AB, function () {
         basic.showString("kedves utasaink a vonat kesik 15 percet")
     }
 })
+input.onButtonPressed(Button.B, function () {
+    for (let index = 0; index < 1; index++) {
+        basic.showString("wake up neo..")
+        basic.showString("WAKE UP!")
+    }
+})
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     basic.showString("the code was made by Boti")
 })
@@ -94,9 +87,6 @@ let hőmérséklet = 0
 let érték = 0
 music.play(music.stringPlayable("- - A G F E D - ", 190), music.PlaybackMode.InBackground)
 basic.showString("Mr.Robot")
-basic.forever(function () {
-    basic.showString("" + (input.temperature()))
-})
 control.inBackground(function () {
     if (true) {
         érték = 23
