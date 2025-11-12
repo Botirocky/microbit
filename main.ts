@@ -17,6 +17,9 @@ input.onButtonPressed(Button.A, function () {
     }
 })
 input.onGesture(Gesture.Shake, function () {
+    basic.clearScreen()
+})
+input.onButtonPressed(Button.AB, function () {
     for (let index = 0; index < 1; index++) {
         music.play(music.stringPlayable("C5 A F D - - - - ", 130), music.PlaybackMode.UntilDone)
         basic.showString("M")
@@ -84,9 +87,6 @@ input.onGesture(Gesture.Shake, function () {
         basic.showString("kedves utasaink a vonat kesik 15 percet")
     }
 })
-input.onButtonPressed(Button.AB, function () {
-    basic.clearScreen()
-})
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     basic.showString("the code was made by Boti")
 })
@@ -95,6 +95,9 @@ let érték = 0
 music.play(music.stringPlayable("- - A G F E D - ", 190), music.PlaybackMode.InBackground)
 basic.showString("Mr.Robot")
 basic.forever(function () {
+    basic.showString("" + (input.temperature()))
+})
+control.inBackground(function () {
     if (true) {
         érték = 23
     }
